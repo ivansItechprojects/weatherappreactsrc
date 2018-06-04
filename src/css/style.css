@@ -7,6 +7,7 @@ body {
 }
 .appContentText {
   position: absolute;
+  padding: 20px;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -23,9 +24,56 @@ box-shadow:         0px 6px 17px 0px rgba(50, 50, 50, 0.75);
 .mainData {
   display: flex;
   justify-content: center;
-  margin: 0 auto;
+  margin: 0 auto 15px;
   text-align: center;
   flex-direction: column;
+  font-size: 1.2em;
+  font-family: 'Raleway', sans-serif;
+}
+.mainData p {
+  font-size: 1.2em;
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+}
+.CloudData {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin: 0 auto;
+  width: 65%;
+  font-size: 1.2em;
+  font-family: 'Raleway', sans-serif;
+}
+.fa-sun {
+  position: relative;
+  left: -33px;
+  top: -10px;
+}
+.glowne {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.2em;
+  margin: 0 0 15px;
+  font-family: 'Raleway', sans-serif;
+}
+.wiatr {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.2em;
+  font-family: 'Raleway', sans-serif;
+}
+.wiatr strong {
+  margin: 0 10px 0 0;
+}
+.wiatr ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.temperature {
+  cursor: pointer;
 }
 .bubblewrapper {
     background: lightgrey;
