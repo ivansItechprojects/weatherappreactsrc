@@ -57,6 +57,10 @@ box-shadow:         0px 6px 17px 0px rgba(50, 50, 50, 0.75);
   margin: 0 0 15px;
   font-family: 'Raleway', sans-serif;
 }
+.teperature {
+    margin-bottom: 15px;
+    display: block;
+}
 .wiatr {
   display: flex;
   justify-content: center;
@@ -117,8 +121,7 @@ box-shadow:         0px 6px 17px 0px rgba(50, 50, 50, 0.75);
     animation: scale 1.4s ease-in-out alternate infinite;
     box-shadow: 0 0 2rem rgba(150, 150, 255, .05);
     z-index: 2;
-    margin-left: 43%;
-    margin-top: 20%;
+    margin: 376px 0 1px 43%;
 }
 
 .bubble::after {
@@ -189,7 +192,7 @@ box-shadow:         0px 6px 17px 0px rgba(50, 50, 50, 0.75);
 .sun {
     position: absolute;
     top: 25rem;
-    left: 53rem;
+    left: 45%;
     height: 5rem;
     width: 5rem;
     border-radius: 100%;
@@ -277,4 +280,120 @@ box-shadow:         0px 6px 17px 0px rgba(50, 50, 50, 0.75);
 .weatherAppHeading {
   font-family: 'Raleway', sans-serif;
   text-align: center;
+}
+@media screen and (min-width:480px) and (max-width:767px) {
+    .appContentText {
+        width: 95%;
+        top: 5vh;
+        padding: 10px;
+    }
+    .CloudData {
+        flex-direction: column;
+    }
+    .glowne {
+        font-size: 1em;
+    }
+    .CloudData {
+        font-size: 1em;
+    }
+    .CloudData p {
+        margin: 0;
+        padding: 0;
+    }
+    .wiatr {
+        font-size: 1em;
+    }
+    .mainData {
+        font-size: 1em;
+        margin: 0;
+    }
+    .sun {
+        top: 25rem;
+        left: 21%;
+    }
+    .bubble:hover~.sun {
+        top: 24rem;
+        left: 22%;
+    }
+    .line-1 {
+        font-size: 2em;
+    }
+    .bubble {
+        margin: 390px auto auto 27%;
+    }
+    .bubble {
+        margin: 390px auto auto 18%;
+    }
+}
+@media screen and (min-width:1024px) and (max-width:1365px) {
+    .appContentText {
+        width: 70%;
+    }
+}
+@media screen and (min-width:768px) and (max-width:1023px) {
+    .appContentText {
+        width: 95%;
+    }
+    .bubble {
+        margin: 390px auto auto 30%;
+    }
+    .sun {
+        top: 25rem;
+        left: 19%;
+    }
+    .bubble:hover~.sun {
+        top: 24rem;
+        left: 17rem;
+    }
+}
+@media screen and (min-width:480px) and (max-width:767px) {
+    .appContentText {
+        width: 95%;
+    }
+}
+@media screen and (max-width:410px) {
+    .bubble {
+        margin: 390px auto auto 4% !important;
+    }
+}
+@media screen and (min-width:240px) and (max-width:479px) {
+    .appContentText {
+        width: 95%;
+        top: 5vh;
+        padding: 10px;
+    }
+    .CloudData {
+        flex-direction: column;
+    }
+    .glowne {
+        font-size: 1em;
+    }
+    .CloudData {
+        font-size: 1em;
+    }
+    .CloudData p {
+        margin: 0;
+        padding: 0;
+    }
+    .wiatr {
+        font-size: 1em;
+    }
+    .mainData {
+        font-size: 1em;
+        margin: 0;
+    }
+    .sun {
+        top: 25rem;
+        left: 2rem;
+    }
+    .bubble:hover~.sun {
+        top: 24rem;
+        left: 1rem;
+    }
+    .line-1 {
+        font-size: 2em;
+    }
+    .bubble {
+        margin: 390px auto auto 18%;
+    }
 }

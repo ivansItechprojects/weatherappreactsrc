@@ -53,16 +53,14 @@ class App extends React.Component {
                         <div>
                             <div className="mainData">
                                 <div>
-                                <strong>Local city: </strong>
-                            
-                                    {this.state.cont.name}, {this.state.cont.sys.country}   <img src={this.state.cont.weather[0].icon} /> 
+                                    <strong>Local city: </strong>
+
+                                    {this.state.cont.name}, {this.state.cont.sys.country}   <img src={this.state.cont.weather[0].icon} />
                                     <br/>
-                                   <strong> Temperature: <span className="temperature"> {this.state.cont.main.temp}  </span> {String.fromCharCode(176) + "C"}</strong>
+                                    <strong class="teperature"> Temperature: <span className="temperature"> {this.state.cont.main.temp}  </span> {String.fromCharCode(176) + "C"}</strong>
                                 </div>
-                                    
-                                        
-                            <strong>Coordinates:</strong>
-                             
+
+                                <strong>Coordinates:</strong>
                                 Latitude: {this.state.cont.coord.lat}
                                 <br />
                                 Longitude: {this.state.cont.coord.lon}
@@ -81,8 +79,7 @@ class App extends React.Component {
                                         <strong>Weather data:</strong>
                                         <br />
                                         <span>
-                                            {this.state.cont.main.humidity} humidity / wilgotność
-                                            powietrza <span>g/m3</span>{" "}
+                                            {this.state.cont.main.humidity} humidity / wilgotność powietrza <span>g/m3</span>{" "}
                                         </span>
                                         <br />
                                         <span>
@@ -92,14 +89,12 @@ class App extends React.Component {
                                         <br />
                                         <div>
                                             <span>
-                                                {this.state.cont.main.temp_max} tempreture maks/
-                      temperatura maks{" "}
+                                                {this.state.cont.main.temp_max} tempreture maks / temperatura maks{" "}
                                                 <span>{String.fromCharCode(176) + "C"}</span>
                                             </span>
                                             <br />
                                             <span>
-                                                {this.state.cont.main.temp_min} temperatura minimalna /
-                      temperatura minimalna{" "}
+                                                {this.state.cont.main.temp_min} temperatura minimalna / temperatura minimalna{" "}
                                                 <span>{String.fromCharCode(176) + "C"}</span>
                                             </span>
                                             <br />
