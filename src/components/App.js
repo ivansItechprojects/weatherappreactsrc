@@ -1,8 +1,6 @@
 import React from "react";
 import Preloder from "./Preloder";
 
-
-
 class App extends React.Component {
     constructor(props) {
         super(props);
@@ -15,15 +13,12 @@ class App extends React.Component {
             sys: {},
             data: false,
             cont: {},
-            listDataFromChild: null,
-            units: "F"
+            listDataFromChild: null
         };
     }
-
     componentDidMount() {
         this.getLocationAndWeather();
     }
-
     getLocationAndWeather() {
         let th = this;
         if ("geolocation" in navigator) {
@@ -49,29 +44,39 @@ class App extends React.Component {
                 <div className="appContent">
                     <Preloder />
                     <div className="appContentText">
-                        <h1 className="weatherAppHeading">Weather App<span className="fas fa-cloud"></span><span className="far fa-sun"></span></h1>
-                        <div>
+                        <h1 className="weatherAppHeading">Weather App
+                            <span className="fas fa-cloud"></span>
+                            <span className="far fa-sun"></span>
+                        </h1>
                             <div className="mainData">
                                 <div>
                                     <strong>Local city: </strong>
-
-                                    {this.state.cont.name}, {this.state.cont.sys.country}   <img src={this.state.cont.weather[0].icon} />
-                                    <br/>
-                                    <strong class="teperature"> Temperature: <span className="temperature"> {this.state.cont.main.temp}  </span> {String.fromCharCode(176) + "C"}</strong>
+                                        {this.state.cont.name}, {this.state.cont.sys.country}<img src={this.state.cont.weather[0].icon} />
+                                    <br />
+                                    <strong className="teperaturecontainer">Temperature:
+                                        <span className="temperature"> {this.state.cont.main.temp}</span>
+                                        <span className="celsius">{String.fromCharCode(176) + "C"}</span>
+                                        <span className="temperaturecelsjus"> </span>
+                                    </strong>
                                 </div>
-
+                                <span className="switch tiny">
+                                    <input className="switch-input" id="tinySwitch" type="checkbox" name="exampleSwitch"></input>
+                                    <label className="switch-paddle" for="tinySwitch">
+                                        <span className="show-for-sr">Tiny Sandwiches Enabled</span>
+                                    </label>
+                                </span>
                                 <strong>Coordinates:</strong>
-                                Latitude: {this.state.cont.coord.lat}
+                                    Latitude: {this.state.cont.coord.lat}
                                 <br />
-                                Longitude: {this.state.cont.coord.lon}
+                                    Longitude: {this.state.cont.coord.lon}
                             </div>
                             <div className="CloudData">
                                 <strong>Clarity:</strong>
-                                <p>{this.state.cont.visibility}</p>
+                                    <p>{this.state.cont.visibility}</p>
                                 <strong>Clouds:</strong>
-                                <p>{this.state.cont.weather[0].main}</p>
+                                    <p>{this.state.cont.weather[0].main}</p>
                                 <strong>Description:</strong>
-                                <p>{this.state.cont.weather[0].description}</p>
+                                    <p>{this.state.cont.weather[0].description}</p>
                             </div>
                             <div>
                                 <div className="glowne">
@@ -87,18 +92,16 @@ class App extends React.Component {
                                             <span> hPa </span>
                                         </span>
                                         <br />
-                                        <div>
-                                            <span>
-                                                {this.state.cont.main.temp_max} tempreture maks / temperatura maks{" "}
-                                                <span>{String.fromCharCode(176) + "C"}</span>
-                                            </span>
-                                            <br />
-                                            <span>
-                                                {this.state.cont.main.temp_min} temperatura minimalna / temperatura minimalna{" "}
-                                                <span>{String.fromCharCode(176) + "C"}</span>
-                                            </span>
-                                            <br />
-                                        </div>
+                                        <span>
+                                            {this.state.cont.main.temp_max} tempreture maks / temperatura maks{" "}
+                                            <span>{String.fromCharCode(176) + "C"}</span>
+                                        </span>
+                                        <br />
+                                        <span>
+                                            {this.state.cont.main.temp_min} temperatura minimalna / temperatura minimalna{" "}
+                                            <span>{String.fromCharCode(176) + "C"}</span>
+                                        </span>
+                                        <br />
                                     </div>
                                 </div>
                                 <div className="wiatr">
@@ -109,7 +112,6 @@ class App extends React.Component {
                                     <div />
                                 </div>
                             </div>
-                        </div>
                     </div>
                 </div>
             );
